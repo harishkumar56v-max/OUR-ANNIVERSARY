@@ -1,0 +1,667 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advance Happy Anniversary Thangamea ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    color: SkyBlue;
+    background: #190b1c;
+    overflow-x: hidden;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 15px;
+    background:
+    radial-gradient(circle at top, #72254e, transparent 55%),
+    linear-gradient(145deg, #190b1c, #47172f, #170c25);
+    position: relative;
+    overflow: hidden;
+}
+
+.tag {
+    letter-spacing: 5px;
+    color: #ffc3d9;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(35px, 7vw, 65px);
+    color: #ffe4ee;
+    text-shadow: 0 0 25px #ff5c9a;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ff5c9a; }
+    to { text-shadow: 0 0 35px #ff5c9a; }
+}
+
+.subtitle {
+    margin-top: 15px;
+    color: #ffd4e2;
+    font-size: 20px;
+}
+
+.photo-frame {
+    margin: 35px 0 25px;
+    padding: 9px;
+    border: 2px solid #ffc3d9;
+    border-radius: 25px;
+    box-shadow: 0 0 35px #ff4f91;
+    transform: rotate(-2deg);
+}
+
+.photo-frame img {
+    display: block;
+    width: min(260px, 65vw);
+    height: 320px;
+    object-fit: cover;
+    border-radius: 17px;
+    transition: opacity .4s;
+}
+
+.message {
+    max-width: 650px;
+    padding: 30px 22px;
+    margin: 15px;
+    border: 1px solid #ff9aba;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+}
+
+.message h2 {
+    color: #ffb5d0;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.message p {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #ffe9f1;
+}
+
+button {
+    padding: 16px 32px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #ff4e91, #ff91b7);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff4e91;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 35px #ff4e91;
+}
+
+footer {
+    margin-top: 35px;
+    color: #ffb5d0;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.heart {
+    position: fixed;
+    bottom: -40px;
+    pointer-events: none;
+    z-index: 5;
+    animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10,0,15,0.88);
+    z-index: 20;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.letter {
+    width: 100%;
+    max-width: 480px;
+    background: linear-gradient(145deg, #5b183c, #241027);
+    border: 2px solid #ff91b7;
+    border-radius: 25px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 0 40px #ff4e91;
+    animation: appear 0.6s ease;
+}
+
+@keyframes appear {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.letter h2 {
+    color: #ffb5d0;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.letter p {
+    line-height: 1.9;
+    font-size: 18px;
+    color: #ffe5ef;
+}
+
+.close-btn {
+    background: white;
+    color: #d52d70;
+}
+
+.extra-section {
+    padding: 55px 15px;
+    text-align: center;
+    background: linear-gradient(145deg,#190b1c,#351329);
+}
+
+.extra-section h2 {
+    color: #ffb5d0;
+    font-size: 29px;
+    margin-bottom: 25px;
+}
+
+.card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    border: 1px solid #ff91b7;
+    border-radius: 22px;
+    background: rgba(255,255,255,0.07);
+}
+
+.card p {
+    color: #ffe5ef;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px auto;
+}
+
+.time-box {
+    min-width: 75px;
+    padding: 18px 12px;
+    border: 1px solid #ff91b7;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.08);
+}
+
+.time-box strong {
+    display: block;
+    font-size: 27px;
+    color: #ffb5d0;
+}
+
+.time-box span {
+    font-size: 11px;
+    color: #ffe5ef;
+}
+
+.secret-message {
+    display: none;
+    padding: 15px;
+    color: #ffe5ef;
+    line-height: 1.8;
+}
+
+.slideshow-img {
+    width: min(300px, 80vw);
+    height: 320px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 2px solid #ff91b7;
+    box-shadow: 0 0 25px #ff4e91;
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="tag">A SPECIAL DAY • A SPECIAL PERSON</div>
+
+<h1>Advance Happy Anniversary ❤️</h1>
+
+<div class="subtitle">To My Lathuma 🥰</div>
+
+<div class="photo-frame">
+    <img src="photo1.jpeg" alt="Our Beautiful Memory">
+</div>
+
+<div class="message">
+
+<h2>My Person 💗</h2>
+
+<p>
+Some people make life beautiful.
+You are that person in my life.
+Every smile, every memory and every
+little moment with you is special.
+</p>
+
+<br>
+
+<p>
+I don't want a perfect love story.
+I just want a story where you and I
+never stop choosing each other. ❤️
+</p>
+
+<button type="button" onclick="openLetter()">
+    OPEN YOUR SURPRISE 🎁
+</button>
+
+</div>
+
+<footer>
+MADE WITH LOVE, JUST FOR YOU ❤️
+</footer>
+
+</section>
+
+
+<!-- ANNIVERSARY COUNTDOWN -->
+
+<section class="extra-section">
+
+<h2>Our Special Day ⏳</h2>
+
+<p>Every second brings us closer to our special day ❤️</p>
+
+<div id="countdown">
+
+<div class="time-box">
+<strong id="days">00</strong>
+<span>DAYS</span>
+</div>
+
+<div class="time-box">
+<strong id="hours">00</strong>
+<span>HOURS</span>
+</div>
+
+<div class="time-box">
+<strong id="minutes">00</strong>
+<span>MINUTES</span>
+</div>
+
+<div class="time-box">
+<strong id="seconds">00</strong>
+<span>SECONDS</span>
+</div>
+
+</div>
+
+<p id="countMessage">Waiting for our beautiful day ❤️</p>
+
+</section>
+
+
+<!-- OUR MEMORIES SLIDESHOW -->
+
+<section class="extra-section">
+
+<h2>Our Beautiful Memories 📸</h2>
+
+<div class="card">
+
+<img id="slideshow" class="slideshow-img"
+src="photo1.jpeg" alt="Our Memories">
+
+<p style="margin-top:15px">
+Every picture tells our love story. 💗
+</p>
+
+<button onclick="previousPhoto()">❮ Previous</button>
+<button onclick="nextPhoto()">Next ❯</button>
+
+</div>
+
+</section>
+
+
+<!-- THREE SECRET MESSAGES -->
+
+<section class="extra-section">
+
+<h2>Three Little Secrets For You 💌</h2>
+
+<div class="card">
+
+<button onclick="showSecret(0)">
+Open When You Miss Me ❤️
+</button>
+
+<p class="secret-message" id="secret0">
+Even when we are far apart, you are always
+close to my heart. I miss you, Thangamea! ❤️
+</p>
+
+</div>
+
+<div class="card">
+
+<button onclick="showSecret(1)">
+Open When You Feel Sad 🥺
+</button>
+
+<p class="secret-message" id="secret1">
+Don't forget how special you are.
+I always want to see you smiling. 💗
+</p>
+
+</div>
+
+<div class="card">
+
+<button onclick="showSecret(2)">
+Open When You Need Me 🫶
+</button>
+
+<p class="secret-message" id="secret2">
+I believe in you and your dreams.
+Keep going, Lathuma. I am always cheering for you. ❤️
+</p>
+
+</div>
+
+</section>
+
+
+<!-- MUSIC PLAYER -->
+
+<section class="extra-section">
+
+<h2>Our Song 🎵</h2>
+
+<p>A little music, a lot of memories.</p>
+
+<audio id="bgMusic" src="love.mp3"></audio>
+
+<button onclick="playMusic()" id="musicBtn">
+🎵 Play Our Song
+</button>
+
+</section>
+
+
+<!-- SECRET LOVE LETTER -->
+
+<div class="modal" id="loveModal">
+
+<div class="letter">
+
+<h2>My Dearest Thangamea 💌</h2>
+
+<p>
+You are more than just a person in my life.
+You are my happiness, my favourite smile
+and my most precious memory.
+</p>
+
+<br>
+
+<p>
+Thangameaa Good Things takes time but it will work.
+Thangameaa achieve your dream i will wait for you
+till you success in your dream.
+</p>
+
+<br>
+
+<p>
+After that i want to live with you and travel
+with you world wide Thangameaa.
+Within Two Year want to see as a Jr.Scientist Lathuma.
+</p>
+
+<br>
+
+<p>
+No matter how many days pass,
+I want to create countless beautiful
+memories with you.
+</p>
+
+<br>
+
+<h2>I LOVE YOU DEE THANGAMEA ❤️</h2>
+
+<p>Always yours. Yours Arnold.</p>
+
+<button type="button" class="close-btn"
+onclick="closeLetter()">
+Close ❤️
+</button>
+
+</div>
+</div>
+
+
+<script>
+
+// OPEN SURPRISE LETTER
+
+function openLetter() {
+    document.getElementById("loveModal").style.display = "flex";
+    createBurst();
+}
+
+// CLOSE LETTER
+
+function closeLetter() {
+    document.getElementById("loveModal").style.display = "none";
+}
+
+// CLOSE BY CLICKING OUTSIDE
+
+document.getElementById("loveModal").addEventListener("click", function(e) {
+    if (e.target === this) {
+        closeLetter();
+    }
+});
+
+
+// FLOATING HEARTS
+
+function createHeart() {
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+    heart.innerHTML = ["❤️", "💕", "💗", "💖"][Math.floor(Math.random()*4)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (15 + Math.random() * 25) + "px";
+    heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 8000);
+}
+
+setInterval(createHeart, 400);
+
+
+// HEART FIREWORKS
+
+function createBurst() {
+    for (let i = 0; i < 35; i++) {
+        setTimeout(createHeart, i * 80);
+    }
+}
+
+
+// ANNIVERSARY COUNTDOWN
+
+const anniversaryDate = new Date("2026-12-04T00:00:00");
+
+function updateCountdown() {
+
+    const now = new Date();
+    const difference = anniversaryDate - now;
+
+    if (difference <= 0) {
+        document.getElementById("countMessage").innerText =
+        "Our special day is here! ❤️";
+
+        ["days","hours","minutes","seconds"].forEach(id => {
+            document.getElementById(id).innerText = "00";
+        });
+
+        return;
+    }
+
+    document.getElementById("days").innerText =
+    Math.floor(difference / 86400000);
+
+    document.getElementById("hours").innerText =
+    Math.floor((difference % 86400000) / 3600000);
+
+    document.getElementById("minutes").innerText =
+    Math.floor((difference % 3600000) / 60000);
+
+    document.getElementById("seconds").innerText =
+    Math.floor((difference % 60000) / 1000);
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+
+// PHOTO SLIDESHOW
+
+const photos = [
+    "photo1.jpeg",
+    "photo2.jpeg",
+    "photo3.jpeg",
+    "photo4.jpeg",
+    "photo5.jpeg",
+    "photo6.jpeg",
+    "photo7.jpeg",
+    "photo8.jpeg",
+    "photo9.jpeg",
+    "photo10.jpeg"
+];
+
+let photoIndex = 0;
+
+function showPhoto() {
+    document.getElementById("slideshow").src = photos[photoIndex];
+}
+
+function nextPhoto() {
+    photoIndex = (photoIndex + 1) % photos.length;
+    showPhoto();
+}
+
+function previousPhoto() {
+    photoIndex = (photoIndex - 1 + photos.length) % photos.length;
+    showPhoto();
+}
+
+// AUTOMATIC SLIDESHOW
+setInterval(nextPhoto, 4000);
+
+
+// SECRET MESSAGES
+
+function showSecret(number) {
+
+    const message = document.getElementById("secret" + number);
+
+    message.style.display =
+    message.style.display === "block" ? "none" : "block";
+
+}
+
+
+// MUSIC - AUTOMATIC STOP AFTER 30 SECONDS
+
+let musicTimer;
+
+function playMusic() {
+
+    const music = document.getElementById("bgMusic");
+    const btn = document.getElementById("musicBtn");
+
+    clearTimeout(musicTimer);
+
+    music.currentTime = 0;
+
+    music.play().then(() => {
+
+        btn.innerHTML = "⏸ Song Playing";
+
+        musicTimer = setTimeout(() => {
+
+            music.pause();
+            music.currentTime = 0;
+
+            btn.innerHTML = "🎵 Play Our Song";
+
+        }, 30000);
+
+    }).catch(() => {
+
+        alert("Song play aagala! love.mp3 file check pannu.");
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
